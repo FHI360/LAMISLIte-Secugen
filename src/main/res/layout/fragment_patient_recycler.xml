@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+
+    <AutoCompleteTextView
+            android:id="@+id/search_field"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-7dp"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="27dp"
+            android:layout_toStartOf="@+id/back"
+            android:background="@drawable/search_layout"
+            android:ems="10"
+            android:fontFamily="@font/nunito_semibold"
+            android:hint="@string/search_here"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:textColor="#999999"
+            android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/search_field"
+        android:layout_alignBottom="@+id/search_field"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:background="@color/md_indigo_A700"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        tools:ignore="ContentDescription" />
+
+    <com.mlsdev.animatedrv.AnimatedRecyclerView
+        android:id="@+id/patient_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_field"
+        android:layout_marginTop="50dp"
+        app:animationDuration="800"
+        app:gridLayoutManagerColumns="3"
+        app:layoutAnimation="@anim/layout_animation_from_bottom_scale"
+        app:layoutManagerOrientation="vertical"
+        app:layoutManagerReverse="false"
+        app:layoutManagerType="grid" />
+
+
+</RelativeLayout>

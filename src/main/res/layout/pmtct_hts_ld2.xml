@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/ristassessment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/personalDetailsCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:focusableInTouchMode="false"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="4dp">
+
+                    <EditText
+                            android:id="@+id/age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableTint="#421C52"
+                            android:hint="Age"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="2dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:singleLine="true"
+                            android:textColor="#000"
+                            android:textStyle="bold"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Previously known HIV positive"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/previously_known_hiv_positive"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="4dp">
+
+                    <EditText
+                            android:id="@+id/date_tested_positive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableTint="#421C52"
+                            android:hint="Date tested positive"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="2dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:singleLine="true"
+                            android:textColor="#000"
+                            android:textStyle="bold"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Accepted HIV test result"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/accepted_hiv_test_result"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="HIV Test result"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/hiv_test_result"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+            '
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Received HIV Test result"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/received_hiv_test_result"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="HIV Re-testing"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/HIV_re-testing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Tested for HepatitisB"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/tested_for_HepatitisB"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="HepatitisB Test result"
+                    android:textColor="#000"/>
+
+        </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/HepatitisB_test_result"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Tested for HepatitisC"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/Tested_for_HepatitisC"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/tesing_result1"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="HepatitisC Test result"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/HepatitisC_Test_result"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="HIV/HBV Co-infected"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/HIV_HBV_co-infected"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="HIV/HBV Co-infected"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/HIVHBV_Co_infected1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Agree to partner notification"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/agree_to_partner_notification"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+            <Button
+                    android:id="@+id/save"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/blue_button"
+                    android:elevation="2dp"
+                    android:padding="16dp"
+                    android:text="Save"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"/>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</ScrollView>

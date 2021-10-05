@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/ristassessment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/personalDetailsCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:focusableInTouchMode="false"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="4dp">
+
+                    <EditText
+                            android:id="@+id/clientCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableTint="#421C52"
+                            android:hint="Risk Stratification Code"
+                            android:inputType="text"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="2dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:singleLine="true"
+                            android:textColor="#000"
+                            android:textStyle="bold"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/edit_text_background"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="4dp">
+
+                    <EditText
+                            android:id="@+id/dateVisit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:clickable="true"
+                            android:drawableTint="#421C52"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Date of Visit"
+                            android:inputType="datetime"
+                            android:longClickable="false"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="2dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:singleLine="true"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Is this HIV test based on a Clinician/Doctor/Health Care Provider request?"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="a) When was your last HIV test done?  (approximate date of last HIV test in years, months or weeks "
+                    android:textColor="#000"/>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <EditText
+                        android:id="@+id/dateTestDoneValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Enter the value "/>
+
+
+                <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/date_last_teted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_dropdown"
+                        android:entries="@array/years_months_weeks_days"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="center"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="b) What was the result?"
+                    android:textColor="#000"/>
+
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/type"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Since your last HIV test, have you had anal or vaginal or oral sex without a condom with someone who was HIV positive or unaware of their HIV status?"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Have you been forced to have sex against your will (sexual abuse or rape) in the last 6 months or
+since your last HIV test?"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Since your last HIV test, have you had a blood or blood product transfusion?"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Since your last HIV test, have you experienced painful urination, lower abdominal pain, vaginal or penile discharge, pain during sexual intercourse, thick, cloudy, or foul smelling discharge and/or small bumps or blisters near the mouth, penis, vagina, or anal areas?"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <LinearLayout
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:id="@+id/havebeen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Have you been diagnosed with TB or currently have any of the following symptoms: cough, fever, weight loss, night sweats?"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <!--            <CheckBox-->
+            <!--                android:id="@+id/sti3"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="start"-->
+            <!--                android:text="Syphilis" />-->
+
+            <!--            <CheckBox-->
+            <!--                android:id="@+id/sti4"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="start"-->
+            <!--                android:text="Herpes" />-->
+
+            <!--            <CheckBox-->
+            <!--                android:id="@+id/sti5"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="start"-->
+            <!--                android:text="Anal" />-->
+
+            <!--            <CheckBox-->
+            <!--                android:id="@+id/sti6"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="start"-->
+            <!--                android:text="Genital Warts of HPV" />-->
+
+            <!--            <CheckBox-->
+            <!--                android:id="@+id/sti7"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="start"-->
+            <!--                android:text="Viral Hepatitis" />-->
+
+
+            <!--            <CheckBox-->
+            <!--                android:id="@+id/sti8"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:gravity="start"-->
+            <!--                android:text="Tuberculosis (TB)" />-->
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Since your last HIV test, have you ever injected drugs, shared needles or other sharp objects with someone known to be HIV positive or who you didn't know their HIV status"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Since your last HIV test, have you had anal, oral or vaginal sex in exchange for money or other benefits?"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question9"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Have you been beaten, forced to have sex, raped or threatened by your partner or anyone else in the last 12 months"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Does your partner or family deny you food, shelter, freedom of movement, livelihood or finance to access health care in the last 12 months"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Have you heard/seen any social media ad on HIV testing, PrEP (Pre-Exposure Prophylaxis), U=U (Undetectable equals Un-transferable), HIV self-testing?    "
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question13"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+            <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="If yes, did it encourage/motivate you to get tested/coming for support/treatment?"
+                        android:textColor="#000"/>
+
+
+            </LinearLayout>
+            <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/question14"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_dropdown"
+                    android:entries="@array/oneAndTwo"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"/>
+
+            <Button
+                    android:id="@+id/save"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/blue_button"
+                    android:elevation="2dp"
+                    android:padding="16dp"
+                    android:text="Save"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"/>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</ScrollView>
